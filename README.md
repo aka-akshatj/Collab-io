@@ -1,4 +1,4 @@
-# Codify [Collabarative Code Editor]
+# Collab-io [Collabarative Code Editor]
 
 - multiple users can join a room for simultaneous editing in realtime.
 - single user creates a room.
@@ -27,10 +27,6 @@
 - in deployment platform for client code, select the client as "root folder".
 - NOTE: above step is not required in case if manually hosting on server
 
-## Design Overview
 
-Here are some designs for Codify:
 
-![Login Page](https://raw.githubusercontent.com/amanraj8848/Codify/main/design/login.png)
-![Dashboard](https://raw.githubusercontent.com/amanraj8848/Codify/main/design/dashboard.png)
-![Profile](https://raw.githubusercontent.com/amanraj8848/Codify/main/design/profile.gif)
+
