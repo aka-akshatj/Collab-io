@@ -9,22 +9,7 @@ export default function JoinRoom() {
   const navigate = useNavigate()
   const [roomId, setRoomId] = useState("")
   const [username, setUsername] = useState("")
-  const [stars, setStars] = useState([])
-
-  // useEffect(() => {
-  //   const generateStars = () => {
-  //     const newStars = Array.from({ length: 50 }, () => ({
-  //       x: Math.random() * 100,
-  //       y: Math.random() * 100,
-  //       size: Math.random() * 2 + 1,
-  //     }))
-  //     setStars(newStars)
-  //   }
-
-  //   generateStars()
-  //   window.addEventListener("resize", generateStars)
-  //   return () => window.removeEventListener("resize", generateStars)
-  // }, [])
+ 
 
   const handleRoomSubmit = e => {
     e.preventDefault()
@@ -32,6 +17,7 @@ export default function JoinRoom() {
       toast.error("Incorrect room ID")
       return
     }
+    // state object allows to send data to new page that is not visible in the url , room.js will have username through this
     username && navigate(`/room/${roomId}`, { state: { username } })
   }
 
@@ -47,26 +33,10 @@ export default function JoinRoom() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-black to-purple-900 text-white overflow-hidden">
-      {/* Animated stars background */}
-      {/* <div className="fixed inset-0 z-0">
-        {stars.map((star, index) => (
-          <div
-            key={index}
-            className="absolute rounded-full bg-white animate-twinkle"
-            style={{
-              left: `${star.x}%`,
-              top: `${star.y}%`,
-              width: `${star.size}px`,
-              height: `${star.size}px`,
-            }}
-          />
-        ))}
-      </div> */}
-
-      {/* Main Content */}
+    
       <main className="flex-grow flex flex-col items-center justify-center p-4 relative z-10">
         <div className="w-full max-w-md space-y-8 relative">
-          {/* Codify Branding */}
+         
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center space-x-2 bg-black/50 backdrop-blur-md rounded-full px-6 py-3">
               <Code2 className="h-8 w-8 text-blue-400  animate-spin-slow " />

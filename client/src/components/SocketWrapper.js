@@ -18,7 +18,9 @@ function addPropsToChildren(children, props) {
 }
 
 export default function SocketWrapper({ children }) {
-  const socket = io.connect("https://codify-932x.onrender.com/")
+  // const socket = io.connect("https://codify-932x.onrender.com/")
+  // const socket = io.connect("http://localhost:5000/");
+  const socket = io.connect("https://collab-io-p39h.onrender.com/");
 
   const location = useLocation()
   const navigate = useNavigate()
